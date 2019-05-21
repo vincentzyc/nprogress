@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>nprogress.css-demo</title>
+    <link rel="stylesheet" href="./nprogress.css">
+
+  </head>
+
+  <body>
+    <div id="app">
+      <button type="button" onclick="openNProgress()">open</button>
+      <button type="button" onclick="closeNProgress()">close</button>
+    </div>
+    <script src="./nprogress.js"></script>
+  </body>
+  <script type="text/javascript">
+    function openNProgress() {
+      NProgress.configure({
+        minimum: 0.3,
+        trickleSpeed: 200,
+        showBarNumber: true
+      });
+      NProgress.start();
+      setTimeout(() => {
+        NProgress.set(0.5)
+      }, 1000);
+      setTimeout(() => {
+        NProgress.set(0.7)
+      }, 2000);
+      setTimeout(() => {
+        NProgress.set(0.8)
+      }, 3000)
+      setTimeout(() => {
+        NProgress.set(0.9)
+      }, 4000)
+    }
+
+    function closeNProgress() {
+      NProgress.done()
+    }
+  </script>
+
+</html>

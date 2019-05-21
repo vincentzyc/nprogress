@@ -1,0 +1,1 @@
+基于 [nprogress插件](https://github.com/rstacruz/nprogress) 的二次开发，新增显示数字进度功能配置
